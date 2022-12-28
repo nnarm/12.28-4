@@ -1,0 +1,54 @@
+ <!DOCTYPE html> 
+ <html> 
+ <head> 
+ <meta charset="utf-8" /> 
+ <title></title> 
+ </head> 
+ <body> 
+ <form > 
+ 姓名：<input type="text" name="userName" id="user"> <br> 
+ 密码：<input type="password" name="passwd" id="psw"><br> 
+ 性别：<input type="radio" name="sex" value="0" checked>🚹
+ <input type="radio" name="sex" value="1">🚺<br> 
+   血型：<input type="radio" name="Blood type" value="0" checked>A
+ <input type="radio" name="Blood type" value="1">B
+ <input type="radio" name="Blood type" value="2">AB
+ <input type="radio" name="Blood type" value="3">O<br> 
+   性格： <input type="checkbox" name="character" id="" value="0" />社牛
+ <input type="checkbox" name="character" id="" value="1" />社恐
+ <input type="checkbox" name="character" id="" value="2" />正常人<br> 
+ 文件：<input type="txt" id="des"/> 
+ <input type="file" id="f" onchange="show()"/><br> 
+ 简介：<input type="text" ><br> 
+ 省份：<select name="" id=""> 
+ <option >河南省</option> 
+ <option >广东省</option> 
+ <option >四川省</option> 
+   </select><br> 
+ <input type="button" value="提交" onclick="namex();pass()"> 
+ <input type="reset" value="重置"> 
+ </form> 
+ <script> 
+ function show(){ 
+ document.getElementById("des").value = document.getElementById("f").value; 
+ } 
+   function namex(){ 
+ var name1 = document.getElementById("user").value; 
+ if(name1.length==0){ 
+ alert("用户名不得为空！"); 
+ } 
+ } 
+ function pass(){ 
+ var password = document.getElementById("psw").value; 
+   if(password.length<6){  
+ alert("输入的须大于六位"); 
+ } 
+ else 
+ { 
+ alert("注册成功"+" "+"用户名："+(document.getElementById("user").value)+" "+"密码："+(document.getElementById("psw").value)); 
+ } 
+ } 
+   </script> 
+ </body> 
+ </html> 
+  
